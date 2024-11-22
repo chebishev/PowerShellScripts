@@ -39,8 +39,8 @@ if ($switchOption -match "^(Yes|Y)$") {
 }
 
 # Prompt for VM name range
-$minimumVMCount = Read-Host "Enter the starting VM number"
-$maximumVMCount = Read-Host "Enter the ending VM number"
+$minimumVMCount = 1
+$maximumVMCount = Read-Host "How many VM's do you want to create? (Minimum: $minimumVMCount)"
 
 if (-not ($minimumVMCount -as [int]) -or -not ($maximumVMCount -as [int])) {
     Write-Host "Invalid VM number range. Please enter numeric values." -ForegroundColor Red
